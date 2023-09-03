@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>pittsburghtaskforce.org 404</title>
+	</head>
+
+	<body>
+	    <script>
+
+		let slugarray = window.location.pathname.split('/').slice(1);
+		console.log(slugarray);
+		console.log(slugarray.length);
+
+		var newURL = '';
+
+		let entire_pathname = window.location.pathname.substring(1);
+		console.log(entire_pathname.length)
+
+		if (slugarray.length != 0 && entire_pathname.length == 0)
+			newURL = "https://www.pghtaskforce.org/srouter?s=pittsburghtaskforceorg&u=na_0";
+
+		else
+		{
+			console.log(slugarray);
+
+			newURL = 'https://www.pghtaskforce.org/srouter?s=pittsburghtaskforceorg&u=' + entire_pathname;
+			console.log(entire_pathname);
+			console.log(newURL)
+		}
+
+		window.location = newURL;
+
+	    </script>
+	</body>
+
+<html>
